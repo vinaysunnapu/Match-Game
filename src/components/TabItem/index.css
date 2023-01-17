@@ -1,0 +1,15 @@
+.list-item {
+  list-style-type: none;
+}
+.tab-button {
+  color: #ffffff;
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+}
+.button-style {
+  text-decoration: underline;
+  color: #fec653;
+}

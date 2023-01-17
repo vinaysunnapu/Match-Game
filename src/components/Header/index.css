@@ -1,0 +1,31 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cf60c8;
+  padding: 20px;
+}
+.logo-image {
+  width: 130px;
+  height: 60px;
+}
+.timer-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.score-container {
+  display: flex;
+  align-items: center;
+  font-family: roboto;
+  color: #ffffff;
+}
+.timer-container {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.bottom-container {
+  width: 100%;
+  justify-content: center;
+}
