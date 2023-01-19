@@ -2,7 +2,7 @@ import './index.css'
 
 const ProjectItem = props => {
   const {imageItem, getImageItem} = props
-  const {imageUrl, id} = imageItem
+  const {imageUrl, id, category} = imageItem
   const onClickImageItem = () => {
     getImageItem(id)
   }

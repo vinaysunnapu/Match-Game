@@ -254,9 +254,10 @@ class App extends Component {
   state = {
     activeTabId: tabsList[0].tabId,
     timeInSeconds: 60,
-    thumbnailImageUrl: imagesList[0].thumbnailUrl,
+    thumbnailUrl: imagesList[0].thumbnailUrl,
     thumbnailId: imagesList[0].id,
     score: 0,
+    thumbnailCategory: imagesList[0].category,
   }
 
   componentDidMount() {
@@ -268,8 +269,9 @@ class App extends Component {
       timeInSeconds: 60,
       score: 0,
       activeTabId: tabsList[0].tabId,
-      thumbnailImageUrl: imagesList[0].thumbnailUrl,
+      thumbnailUrl: imagesList[0].thumbnailUrl,
       thumbnailId: imagesList[0].id,
+      thumbnailCategory: imagesList[0].category,
     })
   }
 
@@ -278,8 +280,9 @@ class App extends Component {
     const random = Math.floor(Math.random() * len)
     const randElement = imagesList[random]
     this.setState({
-      thumbnailImageUrl: randElement.thumbnailUrl,
+      thumbnailUrl: randElement.thumbnailUrl,
       thumbnailId: randElement.id,
+      thumbnailCategory: randElement.category,
     })
   }
 
@@ -321,9 +324,10 @@ class App extends Component {
     const {
       activeTabId,
       timeInSeconds,
-      thumbnailImageUrl,
+      thumbnailUrl,
       thumbnailId,
       score,
+      thumbnailCategory,
     } = this.state
 
     return (
@@ -356,8 +360,8 @@ class App extends Component {
             <div className="bottom-container">
               <div className="inner-container">
                 <img
-                  src={thumbnailImageUrl}
-                  alt="thumbnail"
+                  src={thumbnailUrl}
+                  alt={`thumbnail ${thumbnailCategory}`}
                   className="thumbnail-image"
                 />
                 <ul className="tab-list-container">

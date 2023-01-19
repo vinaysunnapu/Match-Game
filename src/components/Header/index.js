@@ -10,17 +10,22 @@ const Header = props => {
         alt="website logo"
         className="logo-image"
       />
-      <div className="score-container">
-        <p>Score: {score}</p>
-        <div className="timer-container">
+      <ul className="score-container">
+        <li>
+          <p>Score:{score}</p>
+        </li>
+        <li className="timer-container">
           <img
             src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png"
             alt="timer"
             className="timer-image"
           />
           <p>{timeInSeconds} sec</p>
-        </div>
-      </div>
+        </li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
     </nav>
   )
 }
