@@ -254,7 +254,7 @@ class App extends Component {
   state = {
     activeTabId: tabsList[0].tabId,
     timeInSeconds: 60,
-    thumbnailUrl: imagesList[0].thumbnailUrl,
+    imageUrl: imagesList[0].imageUrl,
     thumbnailId: imagesList[0].id,
     score: 0,
     thumbnailCategory: imagesList[0].category,
@@ -269,7 +269,7 @@ class App extends Component {
       timeInSeconds: 60,
       score: 0,
       activeTabId: tabsList[0].tabId,
-      thumbnailUrl: imagesList[0].thumbnailUrl,
+      imageUrl: imagesList[0].imageUrl,
       thumbnailId: imagesList[0].id,
       thumbnailCategory: imagesList[0].category,
     })
@@ -280,7 +280,7 @@ class App extends Component {
     const random = Math.floor(Math.random() * len)
     const randElement = imagesList[random]
     this.setState({
-      thumbnailUrl: randElement.thumbnailUrl,
+      imageUrl: randElement.imageUrl,
       thumbnailId: randElement.id,
       thumbnailCategory: randElement.category,
     })
@@ -324,7 +324,7 @@ class App extends Component {
     const {
       activeTabId,
       timeInSeconds,
-      thumbnailUrl,
+      imageUrl,
       thumbnailId,
       score,
       thumbnailCategory,
@@ -359,11 +359,7 @@ class App extends Component {
           ) : (
             <div className="bottom-container">
               <div className="inner-container">
-                <img
-                  src={thumbnailUrl}
-                  alt={`thumbnail ${thumbnailCategory}`}
-                  className="thumbnail-image"
-                />
+                <img src={imageUrl} alt="match" className="thumbnail-image" />
                 <ul className="tab-list-container">
                   {tabsList.map(eachTab => (
                     <TabItem

@@ -2,7 +2,7 @@ import './index.css'
 
 const ProjectItem = props => {
   const {imageItem, getImageItem} = props
-  const {imageUrl, id, category} = imageItem
+  const {thumbnailUrl, imageUrl, id} = imageItem
   const onClickImageItem = () => {
     getImageItem(id)
   }
@@ -13,7 +13,7 @@ const ProjectItem = props => {
         className="project-button"
         onClick={onClickImageItem}
       >
-        <img src={imageUrl} alt="match" className="image" />
+        <img src={thumbnailUrl} alt="thumbnail" className="image" />
       </button>
     </li>
   )
